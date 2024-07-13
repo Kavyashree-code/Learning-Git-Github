@@ -156,10 +156,10 @@ $ git push -u origin main
       (pushing code to github)
       if error:"failed to push some refs to ..githublnk" then
 
-$ git push --rebase origin main
+$ git pull --rebase origin main
+        (merge readme and initial commit as 1)
 
-
-$ git pull -u origin main
+$ git push -u origin main
      (now pushes code perfectly)
      
 $ git push -u origin main
