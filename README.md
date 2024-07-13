@@ -170,6 +170,11 @@ $ git log --all --oneline
 $ git push -u origin contact
       (adding another branch contact )
       
-$ 
+$ git push
+    (all the changes in local goes to remote repo)
+
+$
+$
+$
 
   
