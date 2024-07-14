@@ -215,12 +215,33 @@ if we push code to github then not reset we need to revert
 $ git revert id_tht_id_oly
   (before commit not removed but thr and creates new commit and changes gets removed)
 $ git revert --hard id_tht_id_oly~3  (head comes to 3)
-$
-$
-$
-$
-$
-$
+
+$ git revert head~3..head    (3 is not included and 3 diff revert happens and shows in history)
+
+$ git revert --no-commit head~3..   (comes to staging area)
+
+$ git revert --abort
+       (normal and closes all staged area)
+       
+$ git revert --continue
+       (all 3 in 1 commit )
+       
+$ git merge --abort
+  (conflict is not resolved but goes)
+  
+$ git stash
+(goes to stash area in gitlens)
+or
+$ git stash -m "  "
+
+$ git stash list
+
+$ git stash drop1
+
+$ git stash clear
+
+
+
 $
 $
 $
