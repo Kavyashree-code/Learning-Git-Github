@@ -56,6 +56,8 @@ download git (git-scm.com)
   github: if the .git folder i.e local repository code deleted we cannot recover the code so we use github i.e remote repository
 
   Branch : y is it necceccasry to create a branch-here whole project is managed by git here main branch is Master inside Master branch the whole proj code excits using this master branch we publish code to the server, so directly we dont work with the master branch as it goes to live website(production environment) so we create another branch from master
+
+  head oly refers to current working directory before will not show.
   
   
   $ git -v
@@ -171,10 +173,59 @@ $ git push -u origin contact
       (adding another branch contact )
       
 $ git push
-    (all the changes in local goes to remote repo)
+    (all the changes in local goes to remote repo so even orign/main also come here to new change)
 
+$ git merge main
+       (if contact b is little far from main b then we can take main b code inside contact b)
+$ git fetch
+    (wtever changes made & commited in remote repo comes to local repo- edited code in github can be fetched in vs code)
+or $ git pull (it merge and fetch also)
+
+$ git merge origin/main
+     (to make main and origin/main in same current branch)
+    or $ git pull (it merge and fetch also)
+
+$ git reset id_of_tht_we_want_to_go
+ (if changes made in local and needs to be delete tht sudden change tht commited - to go to back code in local repo. after tht id 
+     commits r all deleted)
+ 
+$ git reset --hard delected_id
+  (commits gets removed from current working directory and be same as before -completly deleted, can bring back by seeing id in reflog)
+  
+$ git reset --soft id 
+or
+git reset id
+(code goes in history but shows in staged section) 
+
+$ git reflog
+ (all id even reset/remove -id reference)
+ 
+$ git checkout id (head comes to tht id, so head becomes detached)
+ so
+$ git checkout main (normal state head and main attached)
+ if
+$ git checkout head (head and main de-attached)
+$ git checkout main (normal state head and main attached points head)
+
+ using head we can navigate ie where head points
+$ git checkout head~0 (same)
+$ git checkout head~1 (1 step before)
+
+if we push code to github then not reset we need to revert
+$ git revert id_tht_id_oly
+  (before commit not removed but thr and creates new commit and changes gets removed)
+$ git revert --hard id_tht_id_oly~3  (head comes to 3)
 $
 $
 $
+$
+$
+$
+$
+$
+$
+$
+$
+
 
   
